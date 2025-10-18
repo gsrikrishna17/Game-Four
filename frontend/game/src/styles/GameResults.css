@@ -1,0 +1,136 @@
+.results-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.results-card {
+  background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
+  border-radius: 24px;
+  padding: 60px 50px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 102, 255, 0.3);
+  text-align: center;
+  border: 6px solid white;
+}
+
+.results-title {
+  color: white;
+  font-size: 52px;
+  margin: 0 0 40px 0;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.results-stats {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 35px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat.total {
+  border-bottom: none;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.stat-label {
+  font-weight: 600;
+  text-align: left;
+}
+
+.stat-value {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.draw-message {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 35px;
+  margin-bottom: 40px;
+  color: white;
+  font-size: 18px;
+}
+
+.draw-message p {
+  margin: 0;
+}
+
+.results-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 16px 35px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  max-width: 200px;
+}
+
+.btn-primary {
+  background: white;
+  color: #0066ff;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+}
+
+.btn-secondary {
+  background: #ffdd00;
+  color: #0066ff;
+  box-shadow: 0 6px 20px rgba(255, 221, 0, 0.3);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 221, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .results-card {
+    padding: 40px 30px;
+  }
+
+  .results-title {
+    font-size: 36px;
+  }
+
+  .results-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    max-width: 100%;
+  }
+}
