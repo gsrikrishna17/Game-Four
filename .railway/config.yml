@@ -1,0 +1,22 @@
+# Railway configuration for deployment
+version: 1
+
+services:
+  - name: frontend
+    type: nodejs
+    buildCommand: npm run build
+    startCommand: npm start
+    port: 3000
+    
+    # Environment variables
+    env:
+      NODE_ENV: production
+      
+    # Health check
+    healthCheck:
+      path: /
+      interval: 30s
+      timeout: 10s
+      
+    # Auto-deploy on push
+    autoDeploy: true
