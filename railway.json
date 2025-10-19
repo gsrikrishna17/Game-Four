@@ -1,0 +1,34 @@
+{
+  "services": {
+    "backend": {
+      "build": {
+        "builder": "dockerfile",
+        "dockerfile": "backend/Dockerfile"
+      },
+      "deploy": {
+        "startCommand": "./main",
+        "restartPolicyType": "on_failure",
+        "restartPolicyMaxRetries": 5,
+        "port": 8080
+      },
+      "volumes": [
+        {
+          "name": "game-data",
+          "mountPath": "/app/data"
+        }
+      ]
+    },
+    "frontend": {
+      "build": {
+        "builder": "dockerfile",
+        "dockerfile": "frontend/Dockerfile"
+      },
+      "deploy": {
+        "startCommand": "npm start",
+        "restartPolicyType": "on_failure",
+        "restartPolicyMaxRetries": 5,
+        "port": 5173
+      }
+    }
+  }
+}
